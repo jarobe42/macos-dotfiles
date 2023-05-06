@@ -226,6 +226,12 @@ setup_macos() {
         echo "Enable Safari’s debug menu"
         defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
+        echo "Don't reorder Spaces based on most recent use"
+        defaults write com.apple.dock "mru-spaces" -bool false
+
+        echo "Speed up Mission Control"
+        defaults write com.apple.dock expose-animation-duration -float 0.1
+
         echo "Kill affected applications"
 
         for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done

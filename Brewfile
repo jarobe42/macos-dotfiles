@@ -5,25 +5,35 @@ if OS.mac?
     tap "homebrew/cask"
     tap "homebrew/cask-fonts"
     tap "koekeishiya/formulae"
+    tap "FelixKratz/formulae"
 
-    brew "noti" # utility to display notifications from scripts
+    brew "noti" # utility to display notifications from 
     brew "trash" # rm, but put in the trash rather than completely delete
 
     # Applications
+    cask "alacritty"
     cask "kitty" # a better terminal emulator
     cask "imageoptim" # a tool to optimize images
     cask "1password/tap/1password-cli"
     cask "wezterm" # a better terminal emulator
+    cask "visual-studio-code" # vscode
+    cask "firefox" # firefox
 
     # yabai
     brew "yabai"
     brew "skhd"
 
+    brew "sketchybar"
+    cask "sf-symbols"
+
     # Fonts
     cask "font-fira-code"
     cask "font-jetbrains-mono"
     cask "font-cascadia-mono"
+    cask "font-hack-nerd-font"
     cask "font-symbols-only-nerd-font"
+    cask "font-fontawesome"
+    cask "font-awesome-terminal-fonts"
 elsif OS.linux?
     brew "xclip" # access to clipboard (similar to pbcopy/pbpaste)
 end
@@ -61,3 +71,7 @@ brew "wget" # internet file retriever
 brew "z" # switch between most used directories
 brew "zoxide" # switch between most used directories
 brew "zsh" # zsh (latest)
+
+# python
+brew "pyenv"
+brew "pipenv"

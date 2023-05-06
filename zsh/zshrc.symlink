@@ -158,3 +158,8 @@ done
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 # If a ~/.localrc zshrc exists, source it
 [[ -a ~/.localrc ]] && source ~/.localrc
+
+# Python
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
